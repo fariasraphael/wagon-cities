@@ -1,6 +1,6 @@
 // external modules
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import { Provider } from 'react-redux';
 import { createStore, combineReducers } from 'redux';
 
@@ -14,9 +14,8 @@ const reducers = combineReducers({
 });
 
 // render an instance of the component in the DOM
-ReactDOM.render(
+createRoot(document.getElementById('root')).render(
   <Provider store={createStore(reducers)}>
     <App />
-  </Provider>,
-  document.getElementById('root')
+  </Provider>
 );
