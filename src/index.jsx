@@ -9,12 +9,15 @@ import App from './components/app';
 import '../assets/stylesheets/application.scss';
 
 // State and reducers
+import citiesReducer from './reducers/cities_reducer'
 const reducers = combineReducers({
-  changeMe: (state = null, action) => state
+  //changeMe: (state = null, action) => state
+  cities: citiesReducer
 });
 
 // render an instance of the component in the DOM
-createRoot(document.getElementById('root')).render(
+const root = document.getElementById('root')
+createRoot(root).render(
   <Provider store={createStore(reducers)}>
     <App />
   </Provider>
