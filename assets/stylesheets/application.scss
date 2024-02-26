@@ -13,7 +13,7 @@ body {
   .active-city {
     width: 70%;
     margin-left: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     padding: 10px 15px;
     border: 1px solid #ddd;
     border-radius: 4px;
@@ -26,4 +26,8 @@ body {
 .list-group-item {
   background-color: transparent;
   cursor: pointer;
+}
+
+.list-group-item.selected {
+  border: 2px yellow solid;
 }
