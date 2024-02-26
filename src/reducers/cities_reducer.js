@@ -3,7 +3,7 @@ export default function(state, action) {
 		return [];
 	}
 
-	if(action.type === 'SET_CITIES') {
+	if (action.type === 'SET_CITIES') {
 		return action.payload;
 	} else {
 		return state;
