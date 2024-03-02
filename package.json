@@ -32,7 +32,7 @@
   },
   "scripts": {
     "start": "webpack server --mode development",
-    "lint": "eslint './src/**/*.js' './src/**/*.jsx'",
+    "lint": "eslint ./src/**/*.js ./src/**/*.jsx",
     "deploy": "webpack --mode production && gh-pages -d dist"
   }
 }
