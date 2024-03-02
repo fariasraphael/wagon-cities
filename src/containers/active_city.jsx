@@ -7,27 +7,27 @@ class ActiveCity extends Component {
 
 	render() {
 
-		if (!this.props.activeCity) {
-    return (
-      <div className="active-city">
-        <p>Select a city...</p>
-      </div>
-    );
+		if (!this.props.activatedCity) {
+    		return (
+      			<div className="active-city">
+        			<p>Select a city...</p>
+      			</div>
+    		);
   }
 
-		const url = `https://kitt.lewagon.com/placeholder/cities/${this.props.activeCity.slug}`;
+		const url = `https://kitt.lewagon.com/placeholder/cities/${this.props.activatedCity.slug}`;
 
 		return(
 			<div className="active-city">
-				<p>{this.props.activeCity.name}</p>
+				<p>{this.props.activatedCity.name}</p>
 				<img src={url} alt="" width="100%"/>
 			</div>
 		);
 	}
 }
 
-function mapReduxStateToProps(state) {
-	return { activeCity: state.activeCity };
+function mapReduxStateToProps(reduxState) {
+	return { activatedCity: reduxState.activatedCity };
 }
 
 export default connect(mapReduxStateToProps)(ActiveCity);
